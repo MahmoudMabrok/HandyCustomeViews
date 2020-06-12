@@ -1,0 +1,9 @@
+<resources>
+    <declare-styleable name="TimePicker">
+        <attr name="headText" format="string"/>
+        <attr name="timeStyle" format="reference"/>
+        <attr name="ask24Hour" format="boolean"  />
+        <attr name="show24Hour" format="boolean"  />
+
+    </declare-styleable>
+</resources>
