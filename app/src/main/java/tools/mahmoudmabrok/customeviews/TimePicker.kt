@@ -3,6 +3,7 @@ package tools.mahmoudmabrok.customeviews
 import android.app.TimePickerDialog
 import android.content.Context
 import android.util.AttributeSet
+import android.util.Log
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
 import kotlinx.android.synthetic.main.time.view.*
@@ -30,15 +31,15 @@ class TimePicker @JvmOverloads constructor(
     init {
         // get attributes
         val typed = context.obtainStyledAttributes(attrs, R.styleable.TimePicker)
-
-
         val head = typed.getString(R.styleable.TimePicker_headText)
-
         ask24 = typed.getBoolean(R.styleable.TimePicker_ask24Hour, true)
         show24 = typed.getBoolean(R.styleable.TimePicker_show24Hour, true)
 
+        // after use, we should free/recycle as it consume memory
+        typed.recycle()
 
-        print("ask24$ask24 show24$show24")
+
+        Log.d("AppApp" ,"ask24$ask24 show24$show24" )
 
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         inflater.inflate(R.layout.time, this)

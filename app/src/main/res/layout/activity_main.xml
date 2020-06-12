@@ -12,5 +12,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:headText="@string/def_head"
+        app:ask24Hour="false"
+        app:show24Hour="true"
+        />
+
+
+
+
+    <tools.mahmoudmabrok.customeviews.TimePicker
+        android:id="@+id/sasa2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sasa"
+        app:headText="@string/def_head"
+        app:ask24Hour="true"
+        app:show24Hour="false"
+        />
+
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
