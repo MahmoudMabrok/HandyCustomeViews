@@ -1,4 +1,7 @@
 # HandyCustomeViews
+
+[![HitCount](http://hits.dwyl.com/MahmoudMabrok/HandyCustomeViews.svg)](http://hits.dwyl.com/MahmoudMabrok/HandyCustomeViews)
+
 Some Helpful Android Custom Views, comes with its logic. 
 
 
