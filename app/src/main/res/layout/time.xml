@@ -21,7 +21,8 @@
         android:text=""
         android:textSize="18sp"
         android:padding="10dp"
-        android:drawableEnd="@drawable/ic_date"
+        android:background="#ffffff"
+        android:drawableEnd="@drawable/ic_time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header" />

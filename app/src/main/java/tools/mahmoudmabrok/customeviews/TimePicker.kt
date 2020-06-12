@@ -56,12 +56,13 @@ class TimePicker @JvmOverloads constructor(
 
         // init values
         header.text = head
-        tvTime.setCompoundDrawablesRelative(
+
+      /*  tvTime.setCompoundDrawablesRelative(
             null,
             null,
             endDrawable ?: context.getDrawable(R.drawable.ic_time),
             null
-        )
+        )*/
 
      //    tvTime.background = timeBG
 
@@ -71,11 +72,9 @@ class TimePicker @JvmOverloads constructor(
 
     }
 
-
     fun addListener(listener: (hour: Int, minutes: Int) -> Unit) {
         this.timeListener = listener
     }
-
 
     fun getTimeAS12Hour(): String? {
         return if (finalHour == -1) null else DateTiemHelper.get12HourTime(finalHour, finalMinute)
@@ -90,21 +89,13 @@ class TimePicker @JvmOverloads constructor(
 
     fun isAfterOrEqual (hour: Int, minutes: Int):Boolean {
         if (finalHour == -1) return true
-
         return  DateTiemHelper.isAfterOrEqual(hour , minutes , finalHour, finalMinute)
     }
 
-
     fun isBeforeOrEqual (hour: Int, minutes: Int):Boolean {
         if (finalHour == -1) return true
-
         return  DateTiemHelper.isBeforeOrEqual(hour , minutes , finalHour, finalMinute)
     }
-
-
-
-
-
 
     private fun openDialoge() {
         val calender = Calendar.getInstance().apply {
@@ -150,6 +141,5 @@ class TimePicker @JvmOverloads constructor(
         }
 
     }
-
 
 }
