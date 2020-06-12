@@ -84,10 +84,10 @@ class TimePicker @JvmOverloads constructor(
     fun getTimeAS24Hour(): String? {
         return if (finalHour == -1) null else DateTiemHelper.get24HourTime(finalHour, finalMinute)
     }
-    /*
     fun getHours() = finalHour
-    fun getMinutes() = finalHour
-*/
+    fun getMinutes() = finalMinute
+
+
     fun isAfterOrEqual (hour: Int, minutes: Int):Boolean {
         if (finalHour == -1) return true
 
@@ -98,7 +98,7 @@ class TimePicker @JvmOverloads constructor(
     fun isBeforeOrEqual (hour: Int, minutes: Int):Boolean {
         if (finalHour == -1) return true
 
-        return  DateTiemHelper.isAfterOrEqual(hour , minutes , finalHour, finalMinute)
+        return  DateTiemHelper.isBeforeOrEqual(hour , minutes , finalHour, finalMinute)
     }
 
 

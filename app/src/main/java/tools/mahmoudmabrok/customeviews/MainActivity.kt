@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         startTime.addListener { hour, minutes ->
             Log.d(
                 "AppApp",
-                "start $hour $minutes"
+                "start $hour $minutes , ,End ${endTime.getHours()} ${endTime.getMinutes()}"
             )
             val res = endTime.isBeforeOrEqual(hour, minutes)
             Toast.makeText(this , "Start state  $res" , Toast.LENGTH_SHORT).show()
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         endTime.addListener { hour, minutes ->
             Log.d(
                 "AppApp",
-                "end $hour $minutes"
+                "end $hour $minutes  ,Start ${startTime.getHours()} ${startTime.getMinutes()}"
             )
             val res = startTime.isAfterOrEqual(hour, minutes)
             Toast.makeText(this , "End state  $res" , Toast.LENGTH_SHORT).show()

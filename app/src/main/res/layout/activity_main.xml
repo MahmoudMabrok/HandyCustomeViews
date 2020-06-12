@@ -18,7 +18,6 @@
         app:headText="@string/def_head"
         app:ask24Hour="false"
         app:show24Hour="true"
-        app:icon="@drawable/ic_time"
         />
 
 
@@ -31,7 +30,6 @@
         app:headText="@string/end_time"
         app:ask24Hour="false"
         app:show24Hour="true"
-      app:icon="@drawable/ic_date"
         />
 
 
