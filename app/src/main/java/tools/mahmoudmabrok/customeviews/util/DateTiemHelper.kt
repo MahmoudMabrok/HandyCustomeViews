@@ -30,6 +30,14 @@ object DateTiemHelper {
         return st
     }
 
+    fun isAfterOrEqual(hour: Int, minutes: Int, finalHour: Int, finalMinute: Int): Boolean {
+        return LocalTime.of(hour,minutes) >= LocalTime.of(finalHour, finalMinute)
+    }
+
+    fun isBeforeOrEqual(hour: Int, minutes: Int, finalHour: Int, finalMinute: Int): Boolean {
+        return LocalTime.of(hour,minutes) <= LocalTime.of(finalHour, finalMinute)
+    }
+
 
 
 

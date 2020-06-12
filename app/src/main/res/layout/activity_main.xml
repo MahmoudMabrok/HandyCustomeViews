@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,32 +9,30 @@
 
 
     <tools.mahmoudmabrok.customeviews.TimePicker
-        android:id="@+id/sasa"
+        android:id="@+id/startTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:headText="@string/def_head"
         app:ask24Hour="false"
         app:show24Hour="true"
+        app:icon="@drawable/ic_time"
         />
 
 
-
-
-    <tools.mahmoudmabrok.customeviews.TimePicker
-        android:id="@+id/sasa2"
+  <tools.mahmoudmabrok.customeviews.TimePicker
+        android:id="@+id/endTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sasa"
-        app:headText="@string/def_head"
-        app:ask24Hour="true"
-        app:show24Hour="false"
+        app:layout_constraintTop_toBottomOf="@id/startTime"
+        app:headText="@string/end_time"
+        app:ask24Hour="false"
+        app:show24Hour="true"
+      app:icon="@drawable/ic_date"
         />
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

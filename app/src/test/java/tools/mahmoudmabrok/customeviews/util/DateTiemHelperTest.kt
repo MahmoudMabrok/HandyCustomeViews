@@ -88,4 +88,93 @@ class DateTiemHelperTest {
         assertEquals(expected , res)
     }
 
+    @Test
+    fun `isAfter() check that time is After `() {
+        // arrange
+        val afterHour = 10
+        val afterMinutes = 10
+
+        val cuurentHour = 9
+        val cuurentMinutes = 9
+
+
+        // act
+        val res = DateTiemHelper.isAfterOrEqual(afterHour,afterMinutes,cuurentHour,cuurentMinutes)
+
+        // assert
+        assertTrue( res)
+
+    }
+
+    @Test
+    fun `isAfter() check that time is After  with same time `() {
+        // arrange
+        val afterHour = 10
+        val afterMinutes = 10
+
+        val cuurentHour = 10
+        val cuurentMinutes = 10
+
+
+        // act
+        val res = DateTiemHelper.isAfterOrEqual(afterHour,afterMinutes,cuurentHour,cuurentMinutes)
+
+        // assert
+        assertEquals(true ,  res)
+
+    }  @Test
+    fun `isBeforeOrEqual() check that time  is Before `() {
+        // arrange
+        val afterHour = 8
+        val afterMinutes = 8
+
+        val cuurentHour = 9
+        val cuurentMinutes = 9
+
+
+        // act
+        val res = DateTiemHelper.isBeforeOrEqual(afterHour,afterMinutes,cuurentHour,cuurentMinutes)
+
+        // assert
+        assertEquals(true ,  res)
+
+    }
+
+    @Test
+    fun `isBeforeOrEqual() check that time is Before  with same time `() {
+        // arrange
+        val afterHour = 10
+        val afterMinutes = 10
+
+        val cuurentHour = 10
+        val cuurentMinutes = 10
+
+
+        // act
+        val res = DateTiemHelper.isBeforeOrEqual(afterHour,afterMinutes,cuurentHour,cuurentMinutes)
+
+        // assert
+        assertEquals(true ,  res)
+
+    }
+
+    @Test
+    fun `isBeforeOrEqual() check that time is Before  with after time `() {
+        // arrange
+        val afterHour = 11
+        val afterMinutes = 10
+
+        val cuurentHour = 10
+        val cuurentMinutes = 10
+
+        // act
+        val res = DateTiemHelper.isBeforeOrEqual(afterHour,afterMinutes,cuurentHour,cuurentMinutes)
+
+        // assert
+        assertEquals(false ,  res)
+
+    }
+
+
+
 }
