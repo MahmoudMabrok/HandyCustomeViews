@@ -36,11 +36,16 @@ class TimePicker @JvmOverloads constructor(
         // get attributes
         val typed = context.obtainStyledAttributes(attrs, R.styleable.TimePicker)
 
-        val head = typed.getString(R.styleable.TimePicker_headText)
+        val timeHint = typed.getString(R.styleable.TimePicker_timeHint)
+            ?: context.getString(R.string.choose_time)
+        val head =
+            typed.getString(R.styleable.TimePicker_headText) ?: context.getString(R.string.def_head)
         ask24 = typed.getBoolean(R.styleable.TimePicker_ask24Hour, true)
         show24 = typed.getBoolean(R.styleable.TimePicker_show24Hour, true)
 
+
         val endDrawable = typed.getDrawable(R.styleable.TimePicker_icon)
+        val startDrawable = typed.getDrawable(R.styleable.TimePicker_titleIcon)
         val timeBG = typed.getDrawable(R.styleable.TimePicker_timeViewBG)
 
         // after use, we should free/recycle as it consume memory
@@ -48,23 +53,32 @@ class TimePicker @JvmOverloads constructor(
 
         Log.d(
             "AppApp",
-            "timeBG $timeBG,  endDrawable $endDrawable,  $ask24 show24$show24 , end $endDrawable"
+            " hint $timeHint timeBG $timeBG,  startDrawable $startDrawable , endDrawable $endDrawable,  $ask24 show24$show24 , end $endDrawable"
         )
 
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         inflater.inflate(R.layout.time, this)
 
         // init values
+        // header
         header.text = head
-
-      /*  tvTime.setCompoundDrawablesRelative(
+        header.setCompoundDrawablesRelativeWithIntrinsicBounds(
+            startDrawable ?: context.getDrawable(R.drawable.ic_base_time_black),
+            null,
+            null,
+            null
+        )
+        // time view
+        tvTime.text = timeHint
+        tvTime.setCompoundDrawablesRelativeWithIntrinsicBounds(
             null,
             null,
             endDrawable ?: context.getDrawable(R.drawable.ic_time),
             null
-        )*/
+        )
 
-     //    tvTime.background = timeBG
+
+        tvTime.background = timeBG
 
         tvTime.setOnClickListener {
             openDialoge()
@@ -83,18 +97,19 @@ class TimePicker @JvmOverloads constructor(
     fun getTimeAS24Hour(): String? {
         return if (finalHour == -1) null else DateTiemHelper.get24HourTime(finalHour, finalMinute)
     }
+
     fun getHours() = finalHour
     fun getMinutes() = finalMinute
 
 
-    fun isAfterOrEqual (hour: Int, minutes: Int):Boolean {
+    fun isAfterOrEqual(hour: Int, minutes: Int): Boolean {
         if (finalHour == -1) return true
-        return  DateTiemHelper.isAfterOrEqual(hour , minutes , finalHour, finalMinute)
+        return DateTiemHelper.isAfterOrEqual(hour, minutes, finalHour, finalMinute)
     }
 
-    fun isBeforeOrEqual (hour: Int, minutes: Int):Boolean {
+    fun isBeforeOrEqual(hour: Int, minutes: Int): Boolean {
         if (finalHour == -1) return true
-        return  DateTiemHelper.isBeforeOrEqual(hour , minutes , finalHour, finalMinute)
+        return DateTiemHelper.isBeforeOrEqual(hour, minutes, finalHour, finalMinute)
     }
 
     private fun openDialoge() {
