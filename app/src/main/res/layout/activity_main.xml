@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <tools.mahmoudmabrok.customeviews.TimePicker1
         android:id="@+id/startTime"
         android:layout_width="match_parent"
