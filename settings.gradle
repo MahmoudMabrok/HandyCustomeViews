@@ -1,4 +1,3 @@
 rootProject.name='customeviews'
-include ':app'
-include ':demo'
+include ':samples'
 include ':handy'
