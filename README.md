@@ -1,6 +1,6 @@
 # HandyCustomeViews
 
-[![HitCount](http://hits.dwyl.com/MahmoudMabrok/HandyCustomeViews.svg)](http://hits.dwyl.com/MahmoudMabrok/HandyCustomeViews)
+[![HitCount](http://hits.dwyl.com/MahmoudMabrok/HandyCustomeViews.svg)](http://hits.dwyl.com/MahmoudMabrok/HandyCustomeViews) [![](https://jitpack.io/v/MahmoudMabrok/HandyCustomeViews.svg)](https://jitpack.io/#MahmoudMabrok/HandyCustomeViews)
 
 Some Helpful Android Custom Views, comes with its logic. 
 
@@ -23,3 +23,21 @@ Some Helpful Android Custom Views, comes with its logic.
 <img src = "https://user-images.githubusercontent.com/13488900/84578753-66eb9100-adc8-11ea-9ccc-4cef80a9ef09.png" width = "30%"/>
 
 </div>
+
+## How to Add to your project 
+- Add it in your root build.gradle at the end of repositories:
+  ```
+    allprojects {
+      repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+      }
+    }
+  ``` 
+- Add the dependency
+  ```
+  dependencies {
+          implementation 'com.github.MahmoudMabrok:HandyCustomeViews:Tag'
+    }
+  ```
+  - NOTE replace TAG with latest version.  
