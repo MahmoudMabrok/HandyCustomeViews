@@ -18,7 +18,7 @@ import java.util.*
  * add it to view
  * ability to return date as Object or string (formatted)
  */
-class TimePicker @JvmOverloads constructor(
+class TimePicker1 @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 

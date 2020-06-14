@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
 
-    <tools.mahmoudmabrok.customeviews.TimePicker
+    <tools.mahmoudmabrok.customeviews.TimePicker1
         android:id="@+id/startTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,7 +19,7 @@
         app:show24Hour="true" />
 
 
-    <tools.mahmoudmabrok.customeviews.TimePicker
+    <tools.mahmoudmabrok.customeviews.TimePicker1
         android:id="@+id/endTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
