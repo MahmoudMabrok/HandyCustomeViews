@@ -1,0 +1,12 @@
+<resources>
+    <declare-styleable name="TimePicker">
+        <attr name="headText" format="string" />
+        <attr name="timeViewBG" format="reference" />
+        <attr name="icon" format="reference" />
+        <attr name="titleIcon" format="reference" />
+        <attr name="ask24Hour" format="boolean" />
+        <attr name="show24Hour" format="boolean" />
+        <attr name="timeHint" format="string" />
+
+    </declare-styleable>
+</resources>
