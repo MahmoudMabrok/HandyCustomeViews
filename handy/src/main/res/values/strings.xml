@@ -3,5 +3,6 @@
     <string name="def_head">Start Time</string>
     <string name="end_time">End Time</string>
     <string name="choose_time">Choose Time</string>
+    <string name="def_password_hint">Password</string>
 
 </resources>
