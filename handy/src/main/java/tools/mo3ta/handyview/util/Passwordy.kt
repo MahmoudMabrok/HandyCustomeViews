@@ -4,6 +4,7 @@ import android.content.Context
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.util.AttributeSet
+import android.util.Log
 import android.view.LayoutInflater
 import android.widget.EditText
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -17,25 +18,39 @@ class Passwordy @JvmOverloads constructor(
     private var isHidden = true
 
     init {
+
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         inflater.inflate(R.layout.password, this)
+
+        Log.d("TestApp", "l sasasa")
 
 
         toggle.setOnClickListener {
             if (isHidden) {
                 // so show
-                edPassword.transformationMethod = PasswordTransformationMethod.getInstance()
+                edPasswordy.transformationMethod = HideReturnsTransformationMethod.getInstance()
             } else {
                 // hide
-                edPassword.transformationMethod = HideReturnsTransformationMethod.getInstance()
+                edPasswordy.transformationMethod = PasswordTransformationMethod.getInstance()
             }
+            // move cursor to end of text
+            val length = edPasswordy.text.length
+
+            /*
+             edPasswordy.postDelayed(
+             {Log.d("TestApp" , "l $length")}
+          , 250)
+            */
+
+            edPasswordy.append("")
+
             // change state
             isHidden = isHidden.not()
         }
     }
 
     fun getEdit(): EditText? {
-        return edPassword
+        return edPasswordy
     }
 
 }
