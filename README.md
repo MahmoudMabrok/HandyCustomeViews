@@ -1,6 +1,7 @@
 # HandyCustomeViews
 
 [![HitCount](http://hits.dwyl.com/MahmoudMabrok/HandyCustomeViews.svg)](http://hits.dwyl.com/MahmoudMabrok/HandyCustomeViews) [![](https://jitpack.io/v/MahmoudMabrok/HandyCustomeViews.svg)](https://jitpack.io/#MahmoudMabrok/HandyCustomeViews)
+[![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=21)
 
 Some Helpful Android Custom Views, comes with its logic. 
 
