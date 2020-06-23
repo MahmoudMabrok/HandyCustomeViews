@@ -1,4 +1,4 @@
-package tools.mo3ta.handyview.util
+package tools.mo3ta.handyview
 
 import android.content.Context
 import android.text.method.HideReturnsTransformationMethod
@@ -9,7 +9,6 @@ import android.view.LayoutInflater
 import android.widget.EditText
 import androidx.constraintlayout.widget.ConstraintLayout
 import kotlinx.android.synthetic.main.password.view.*
-import tools.mo3ta.handyview.R
 
 class Passwordy @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0

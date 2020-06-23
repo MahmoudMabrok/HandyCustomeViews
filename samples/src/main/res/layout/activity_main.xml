@@ -18,7 +18,7 @@
         app:show24Hour="true" />
 
 
-    <tools.mo3ta.handyview.util.Passwordy
+    <tools.mo3ta.handyview.Passwordy
         android:id="@+id/passwordy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
