@@ -37,5 +37,5 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'com.jakewharton.threetenabp:threetenabp:1.2.4'
 
-    implementation "com.github.MahmoudMabrok:HandyCustomeViews:v0.1.2"
+    implementation project (":handy")
 }
