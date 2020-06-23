@@ -19,7 +19,6 @@ Some Helpful Android Custom Views, comes with its logic.
     - start time picker with previous time
 - Screenshots 
 <div> 
-<img src = "https://user-images.githubusercontent.com/13488900/84526348-6fb36880-acdd-11ea-87d2-9947895c55c2.png" width = "30%"/>
 <img src = "https://user-images.githubusercontent.com/13488900/84526354-717d2c00-acdd-11ea-9550-0dc70ac2da81.png" width = "30%"/>
 <img src = "https://user-images.githubusercontent.com/13488900/84578753-66eb9100-adc8-11ea-9ccc-4cef80a9ef09.png" width = "30%"/>
 
