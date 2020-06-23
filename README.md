@@ -25,6 +25,17 @@ Some Helpful Android Custom Views, comes with its logic.
 
 </div>
 
+
+# Passwordy
+- a password view with toggle view to show/hide password input 
+
+- Screenshots 
+<div> 
+<img src = "https://user-images.githubusercontent.com/13488900/85456903-be93b480-b59f-11ea-8dab-62852217332a.png" width = "40%"/>
+<img src = "https://user-images.githubusercontent.com/13488900/85456893-bc315a80-b59f-11ea-9a7d-54b5febf2e36.png" width = "40%"/>
+</div>
+
+
 ## How to Add to your project 
 - Add it in your root build.gradle at the end of repositories:
   ```
