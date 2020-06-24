@@ -51,4 +51,4 @@ Some Helpful Android Custom Views, comes with its logic.
           implementation 'com.github.MahmoudMabrok:HandyCustomeViews:Tag'
     }
   ```
-  - NOTE replace TAG with latest version.  
+  - NOTE replace **TAG** with latest version.[![](https://jitpack.io/v/MahmoudMabrok/HandyCustomeViews.svg)](https://jitpack.io/#MahmoudMabrok/HandyCustomeViews)  
