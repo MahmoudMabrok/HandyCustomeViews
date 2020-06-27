@@ -9,11 +9,11 @@ Some Helpful Android Custom Views, comes with its logic.
 # TimePicker 
 - handy view to allow user to pick time and place it in textview 
 - Features 
-    - custimze header text 
-    - custimze header start icon
-    - custimze background of text that show time 
-    - custimze text that show time 
-    - custimze icon of text that show time 
+    - customize header text 
+    - customize header start icon
+    - customize background of text that show time 
+    - customize text that show time 
+    - customize icon of text that show time 
     - control time picker to be 24H or 12H 
     - control result time to be 24H or 12H 
     - start time picker with previous time
